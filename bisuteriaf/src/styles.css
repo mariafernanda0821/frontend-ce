@@ -1,0 +1,79 @@
+.tooltip02 {
+  position: relative;
+}
+
+.tooltip02 .tooltiptext02 {
+  visibility: hidden;
+  width: 50px; 
+  background-color: var(--darkGray);
+  font-size: 0.5em;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 10px 10px;
+
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+  bottom: 25px;
+  left: 50%;
+  margin-left: -60px;
+  align-items: center;
+  /* Use half of the width (120/2 = 60), to center the tooltip */
+}
+
+.tooltip02:hover .tooltiptext02 {
+  visibility: visible;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  width: 40px;
+  /* min-width: 160px; */
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  /* padding:5px; */
+  z-index: 1;
+  bottom: 40px;
+}
+.dropdown-content > p {
+  margin: 0 0 10px 0;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+ 
+.cancelButton {
+  background-color: white;
+  font-size: 1em;
+  font-weight: bold;
+  color: var(--negro);
+  border: 1px var(--negro) solid;
+  border-radius: 100px;
+  padding: 10px 40px 10px 40px;
+  margin-right: 10px;
+  width: 150px;
+  /* 
+  @media(max-width:344px){
+      margin-bottom:10px;
+  } */
+}
+
+.confirmButton {
+  background-color: var(--negro);
+  font-size: 1em;
+  font-weight: bold;
+  color: var(--blanco);
+  ;
+  border: none;
+  border-radius: 100px;
+  padding: 10px 40px 10px 40px;
+  margin-left: 10px;
+  width: 150px;
+}
