@@ -12,39 +12,39 @@ import './index.css';
 import './styles.css';
 
 
-// const middlewareUpdate = createUploadLink({
-//   uri: 'http://localhost:3000/',
-//   fetch: fetch,
-// });
+const middlewareUpdate = createUploadLink({
+  uri: 'http://localhost:4000/graphql',
+  fetch: fetch,
+});
 
-// const authLink = setContext((_, { headers }) => {
+const authLink = setContext((_, { headers }) => {
   
-//   const token = "123456789";//localStorage.getItem("token");
+  const token = "123456789";//localStorage.getItem("token");
   
-//   return {
-//     headers: {
-//       ...headers,
-//       Authorization: token ? `Bearer ${token}` : "",
-//     },
-//   };
-// });
+  return {
+    headers: {
+      ...headers,
+      Authorization: token ? `Bearer ${token}` : "",
+    },
+  };
+});
 
-// // Initialize Apollo Client
-// const client = new ApolloClient({
-//   link: authLink.concat(middlewareUpdate),
-//   cache: new InMemoryCache(),
-// });
+// Initialize Apollo Client
+const client = new ApolloClient({
+  link: authLink.concat(middlewareUpdate),
+  cache: new InMemoryCache(),
+});
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
+{/* <Provider store={store}> */}
+{/*  </Provider> */}
 root.render(
 
     <React.StrictMode>
-   {/*  <ApolloProvider client={client}> */}
-      {/* <Provider store={store}> */}
+    <ApolloProvider client={client}>
         <App />
-     {/*  </Provider> */}
-    {/* </ApolloProvider> */}
+    </ApolloProvider>
   </React.StrictMode>
 );
 

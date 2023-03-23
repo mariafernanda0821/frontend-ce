@@ -8,17 +8,17 @@ import { Text } from '../../componentes/atomos/Text';
 import {
   BsFillEyeSlashFill
 } from 'react-icons/bs';
-import IMG from "../../constante";
+//import IMG from "../../constante";
 import Button from "../../componentes/atomos/Button/index.js";
-//import useRegister from "../../hook/register/index.js";
+import useRegister from "../../hook/registrar";
 
 
 const Register = () => {
 
-  // const {
-  //   information, setInformation,
-  //   onCreated
-  // } = useRegister();
+  const {
+    information, setInformation,
+    onCreated
+  } = useRegister();
 
   return (
 
@@ -43,7 +43,7 @@ const Register = () => {
             type={'text'}
             name={"nombre"}
             placeholder={"Introduzca nombre"}
-          //onChange={(e) => setInformation({ ...information, firstName: e.target.value })}
+            onChange={(e) => setInformation({ ...information, nombre: e.target.value })}
           />
 
         </Item>
@@ -64,7 +64,7 @@ const Register = () => {
             type={'text'}
             name={"apellido"}
             placeholder={"Introduzca Apellido"}
-          //            onChange={(e) => setInformation({ ...information, lastName: e.target.value })}
+            onChange={(e) => setInformation({ ...information, apellido: e.target.value })}
           />
 
         </Item>
@@ -85,7 +85,7 @@ const Register = () => {
             type={'text'}
             name={"correoElectronico"}
             placeholder={"Correo Electronico"}
-          //            onChange={(e) => setInformation({ ...information, email: e.target.value })}
+            onChange={(e) => setInformation({ ...information, email: e.target.value })}
           />
 
         </Item>
@@ -105,7 +105,7 @@ const Register = () => {
             type={'password'}
             name={"contrasena"}
             placeholder={"Contrasena"}
-          // onChange={(e) => setInformation({ ...information, password: e.target.value })}
+            onChange={(e) => setInformation({ ...information, password: e.target.value })}
 
           />
           <BsFillEyeSlashFill style={{ position: 'absolute', top: '30%', right: "5%" }} />
@@ -118,7 +118,7 @@ const Register = () => {
             color={'var(--blanco)'}
             //style,
             //hover
-            //onClick={onCreated}
+            onClick={onCreated}
           />
         
         </ItemButon>

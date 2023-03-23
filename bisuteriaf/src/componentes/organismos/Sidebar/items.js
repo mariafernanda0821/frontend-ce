@@ -1,60 +1,54 @@
 import { FaUser, FaStamp, FaSlidersH } from 'react-icons/fa';
+import { GiHeavyCollar, GiSpikedCollar } from 'react-icons/gi';
 
 export const items = [
     {
         key:1,
-        label: 'Mapas',
+        label: 'Collar',
         options: [
-            { pathname: 'Visualizar Continentes', path: `/admin/visualizar/${'continentes'}` },
-            { pathname: 'Visualizar Paises', path: `/admin/visualizar/${'paises'}`},
-            { pathname: 'Visualizar Mapas Mundi', path: '/admin/visualizar-tipo-base-imagen/mundi'},
+            { pathname: 'Moda', path: `#` },
+            { pathname: 'Artesanal', path: `#`},
+            { pathname: 'Indigena', path: '#'},
         ],
         path: '#',
-        icon: <FaUser/>,
+        icon: <GiHeavyCollar/>,
         show: false,
     },
     {
         key:2,
-        label: 'Layer',
+        label: 'Zarcillos',
         options: [
-            {
-                pathname: 'Visualizar Layer',
-                path: '/admin/visualizar-capas'
-            },
+            { pathname: 'Moda', path: `#` },
+            { pathname: 'Artesanal', path: `#`},
+            { pathname: 'Indigena', path: '#'},
         ],
         path: '#',
-        icon: <FaUser/>,
+        icon: <GiSpikedCollar/>,
         show: false,
     },
     {
         key:3,
-        label: 'Project',
+        label: 'Pulseras',
         path: '#',
         options: [
-            {
-                pathname: 'Visualizar Proyectos',
-                path: '/admin/visualizar-proyectos'
-            },
-            {
-                pathname: 'Agregar Proyectos',
-                path: '/admin/agregar-proyecto'
-            }
+            { pathname: 'Moda', path: `#` },
+            { pathname: 'Artesanal', path: `#`},
+            { pathname: 'Indigena', path: '#'},
         ],
-        icon: <FaStamp/>,
+        icon: <GiSpikedCollar/>,
         show: false,
     },
     {
         key:4,
-        label: 'Iconos',
+        label: 'User',
         path:'#',
         options: [
             {
-                pathname: 'Visualiar Iconos',
-                path: '/admin/visualizar-categoria-icono'
+                pathname: 'Ver Perfil',
+                path: '/#'
             },
         ],
-        //path: '/app-functionality-show-users-guide',
-        icon: <FaSlidersH/>,
+        icon: <FaUser/>,
         show: false,
     } 
 ]

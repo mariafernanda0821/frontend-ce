@@ -6,9 +6,15 @@ import { BiSearchAlt } from 'react-icons/bi';
 
 import { TiDelete } from 'react-icons/ti';
 
+import { BsFillCartPlusFill } from 'react-icons/bs';
+
+import { MdFavorite } from 'react-icons/md';
+
 import { 
     FaShareSquare, FaArrowLeft, FaRegFileAlt, FaTrashAlt, FaEdit
 } from 'react-icons/fa';
+
+import { HiUserCircle } from 'react-icons/hi';
 
 import {FiToggleRight,FiToggleLeft } from 'react-icons/fi';
 
@@ -31,7 +37,7 @@ const Icon = ({
     onClick,
     styles,
 }) => {
-
+    
     const SearchIcono = {
         menuMobile: <AiOutlineMenu style={stylesIcon} />,
         search: <BiSearchAlt style={stylesIcon} />,
@@ -44,8 +50,9 @@ const Icon = ({
         enabled: <FiToggleLeft style={stylesIcon} />,
         disabled: <FiToggleRight style={stylesIcon} />,
         view: <BsFillEyeSlashFill style={stylesIcon} />,
-
-    
+        user: <HiUserCircle style={stylesIcon} />,
+        favorito: <MdFavorite style={stylesIcon} />,
+        carrito: <BsFillCartPlusFill style={stylesIcon}/>,
     };
 
     const SearchLabel = {

@@ -1,7 +1,9 @@
 import Navbar from '../../atomos/Navbar/index'
-import React from 'react';
+import React, { useState } from 'react';
 import Sidebar from '../Sidebar/index';
-import { ContentMenu, Container, ContentChildren, ContainerMain, CenterChildren } from './styles';
+import { ContentMenu, Container, ContentChildren, ContainerMain, ContainerItem } from './styles';
+//import SelectMultiple from '../../atomos/Formulario/Select';
+
 
 const Layout = (props) => {
 
@@ -11,15 +13,11 @@ const Layout = (props) => {
         <ContainerMain id='ContainerMain'>
             <Navbar />
             <Container id='Container'>
-                <ContentMenu>
-                    <Sidebar />
-                </ContentMenu>
-
-                <CenterChildren>
+                {/* <CenterChildren> */}
                     <ContentChildren id="ContentChildren">
-                    {props.children}
+                        {props.children}
                     </ContentChildren>
-                </CenterChildren>
+                {/* </CenterChildren> */}
             </Container>
         </ContainerMain>
     )

@@ -2,15 +2,16 @@ import styled from 'styled-components';
 
 export const ContainerMain = styled.div`
     height: 100vh;
-    width: 100vw;
+    width: 100%;
 `;
 
 export const Container = styled.section`
     width: 100%;
-    height: 90%; // tiene 90 por que tiene 5 el nav 
+    height: 89%; // tiene 90 por que tiene 5 el nav 
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     background-color: var(--blanco);
+    //overflow: scroll;
 `;
 
 export const ContentMenu = styled.section`
@@ -24,19 +25,31 @@ export const ContentMenu = styled.section`
 `;
 
 
+
 export const CenterChildren = styled.div`
-  height: 100%;
+  height: 90%;
   width: 100%;
   justify-content: center;
   align-items: center;
-  overflow-y: auto;
+ // overflow-y: auto;
 `;
 
 export const ContentChildren = styled.section`
-    width: 85%;
-    height: 98%; 
+    width: 80%;
+    height: 100%; 
     display: flex;
     justify-content: center;
+    align-items: center;
+    margin: auto;
+`;
+
+export const ContainerItem = styled.section`
+    height: 25%;
+    width: 100% ;
+    display: flex;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
     align-items: center;
     margin: auto;
 `;

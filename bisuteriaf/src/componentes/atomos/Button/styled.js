@@ -9,8 +9,8 @@ export const Container = styled.section`
 
 export const StyledButton = styled.button`
     width: 100%;//${props =>  props.width || '100%'};
-    padding: 1em;
-    background-color: ${props => props.bg || '#000000'};
+    padding: 0.5em;
+    background-color: ${props => props.bg || 'var(--azulVerde)'};
     color: ${props => props.color || '#ffffff'};
     font-size: 1em;;
     font-weight: bolder;
@@ -20,6 +20,10 @@ export const StyledButton = styled.button`
     cursor: pointer;
     transition: .3s all ease-in-out;
 
+    &:hover{
+        color: var(--blanco);
+        background-color: var(--verde);
+    }
        
     @media (max-width: 375px){
         width: 100%;

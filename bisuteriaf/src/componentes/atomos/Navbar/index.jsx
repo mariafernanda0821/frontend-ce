@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 //import { useDispatch } from 'react-redux';
-import { Container, ContainerLogOut, ContainerMenu , ContainerItem} from './styles';
-import Icon from '../Icons/index';
+import { Container, ContainerLogOut, ContainerMenu, ContainerItem } from './styles';
+import Icon from '../Icons';
 import Sidebar from '../../organismos/Sidebar/index';
 
 const Navbar = () => {
@@ -17,10 +17,10 @@ const Navbar = () => {
         <Container>
 
             <Icon
-                type='menu'
-                styleIcon={{ height: '30px', width: '30px', color: 'white' }}
+                type='menuMobile'
+                stylesIcon={{ height: '2em', width: '2em', color: 'var(--blanco)' }}
                 onClick={() => changeMenu()}
-                visibility='true'
+            //visibility='false'
             />
             {
                 visualMenu ?
@@ -32,19 +32,20 @@ const Navbar = () => {
                     </ContainerMenu> : null
             }
             <ContainerItem>
-                <ContainerLogOut href='/'
-                // onClick={e => {
-                //     e.preventDefault();
-                //     logout(dispatch);
-                // }}
-                >
-                    <Icon
-                        type='logOut'
-                        style={{ color: 'white', fontSize: '20px' }}
-                    />
-                    Log Out
-                </ContainerLogOut>
-
+                
+                <Icon
+                    type='carrito'
+                    stylesIcon={{ color: 'white', fontSize: '2em' }}
+                />
+                <Icon
+                    type='favorito'
+                    stylesIcon={{ color: 'white', fontSize: '2em' }}
+                />
+                <Icon
+                    type='user'
+                    stylesIcon={{ color: 'white', fontSize: '2em' }}
+                />
+                
             </ContainerItem>
 
         </Container>

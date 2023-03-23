@@ -47,7 +47,7 @@ const Sidebar = ({
       <ContentLogo >
         <Image
           styleImagen={{ width: '100%', height: '100%' }}
-          src={IMG.LOADING} />
+          src={IMG.LOGO} />
       </ContentLogo>
 
       {itemsOptions.map((item, key) => (

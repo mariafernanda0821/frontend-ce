@@ -22,11 +22,17 @@ const Text = ({
 
 const Title = ({
     text,
-    style
+    style,
+    color,
+    fz,
+    weight
 }) => {
     return (
         <StyledTitle
             style={style}
+            color={color}
+            fz={fz}
+            weight={weight}
         >
             {text}
         </StyledTitle>

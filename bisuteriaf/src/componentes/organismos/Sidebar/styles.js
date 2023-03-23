@@ -4,6 +4,7 @@ export const Container = styled.div`
     width: 100%;
     height: 100%;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    background-color: var(--blanco);
    // box-shadow: 4px 4px 4px 4px rgba(0,0,0,0.2);
 `;
 

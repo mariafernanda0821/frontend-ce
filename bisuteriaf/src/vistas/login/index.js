@@ -11,25 +11,24 @@ import {
 
 import IMG from "../../constante";
 import Button from '../../componentes/atomos/Button';
-import { useNavigate } from "react-router";
-//import useLogin from "../../hook/login/index.js";
+import useLogin from "../../hook/login";
 
 
 const Login = () => {
-  const navigate = useNavigate();
+  //const navigate = useNavigate();
 
-  // const {
-  //   navigate,
-  //   onCreated,
-  //   information, setInformation
-  // } = useLogin();
+  const {
+    navigate,
+    onCreated,
+    information, setInformation
+  } = useLogin();
 
   return (
 
     <ContainerMainLogin>
       <Container>
         <ImgPerfil>
-          <img src={IMG.PERFIL} width='100%' height={'100%'} />
+          <img src={IMG.LOGO} width='100%' height={'100%'} />
         </ImgPerfil>
 
         <Item>
@@ -48,7 +47,7 @@ const Login = () => {
             type={'text'}
             name={"correoElectronico"}
             placeholder={"Correo Electronico"}
-            //onChange={(e) =>setInformation({...information, email: e.target.value})}
+            onChange={(e) =>setInformation({...information, email: e.target.value})}
           />
 
         </Item>
@@ -68,7 +67,7 @@ const Login = () => {
             type={'password'}
             name={"contrasena"}
             placeholder={"Contrasena"}
-            //onChange={(e) =>setInformation({...information, password: e.target.value})}
+            onChange={(e) =>setInformation({...information, password: e.target.value})}
 
           />
           <BsFillEyeSlashFill style={{ position: 'absolute', top: '30%', right: "5%" }} />
@@ -98,7 +97,7 @@ const Login = () => {
           color={'var(--blanco)'}
           //style,
           //hover
-          //onClick={onCreated}
+          onClick={onCreated}
           />
            
         </ItemButon>
